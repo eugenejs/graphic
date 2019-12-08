@@ -4,7 +4,6 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "normalize.css": "latest",
     "jquery": "latest",
     "@fortawesome/fontawesome-free": "latest",
     "animate.css": "latest",

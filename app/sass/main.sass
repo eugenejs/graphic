@@ -11,6 +11,12 @@ body
 	margin: 0
 	font-family: 'Roboto'
 	font-weight: 300
+	overflow-x: hidden
+
+h1,h2,h3,h4,h5
+	font-weight: 300
+	line-height: 1.2
+	margin: 0
 
 h1
 	font-size: 55px
@@ -27,7 +33,7 @@ h3
 p
 	font-size: 14px
 	color: #444444
-
+	margin: 0
 ul
 	padding: 0
 	margin: 0
@@ -43,31 +49,38 @@ button
 	border: none
 	outline: none
 	cursor: pointer
+	font-family: inherit
 
 .btn
 	font-weight: 500
 	text-transform: uppercase
 	font-size: 14px
-	border-radius: 5px
-	padding: 12px 20px
+	border-radius: 4px
+	padding: 12px 22px
 	color: #555555
 	transition: .3s
-	tsn
+	&_standart
+		padding-right: 10px
+		&:hover
+			color: $secondary
 	&_blue
 		color: #ffffff
 		background: $secondary
+		box-shadow: 0 0 20px lighten($secondary, 25)
+		&:hover
+			background: #A551F4
+			box-shadow: 0 0 20px lighten(#A551F4, 25)
 	&_black
 		border: 1px solid #D9D9D9
 		&:hover
 			background: $secondary
 			color: #ffffff
-
 	&_white
 		border: 1px solid #ffffff
 	&_round
 		padding: 0
 		+size(40,40)
-		border: 1px solid #666666
+		border: 1px solid #d9d9d9
 		border-radius: 50%
 
 .container
@@ -75,18 +88,17 @@ button
 	padding: 0 15px
 	margin: 0 auto
 
-.header
-	padding-bottom: 100px
-	&__top
-		position: fixed
-		left: 0
-		right: 0
-		.container
-			display: flex
-			justify-content: space-between
-			align-items: center
-			height: 80px
-			background: #ffffff
+.header__top
+	position: fixed
+	left: 0
+	right: 0
+	background: #ffffff
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		height: 80px
+
 
 .logo
 	font-family: 'Montserat'
@@ -134,11 +146,34 @@ button
 	display: none !important
 .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
 	width: 25px !important
+	background-color: #222 !important
+.animated
+	z-index: -1
+
 
 .offer
 	display: flex
+	flex-direction: row
 	justify-content: space-between
-	align-items: center
-// Home
-	.header
+	padding-top: 100px
+	&:first-child
+		padding-top: 150px
+	&_reverse
+		flex-direction: row-reverse
+	&__content
+		display: flex
+		flex-direction: column
+		justify-content: center
+		width: 38%
+		.btn_black
+			margin-left: 15px
+		.btn_round
+			&:hover
+				color: $secondary
+				border-color: $secondary
+		p
+			margin: 25px 0
+			line-height: 1.75
+	&__image
+		width: 60%
 @import '_media'
