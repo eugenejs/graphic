@@ -97,7 +97,8 @@ button {
       background: #36AFD9;
       color: #ffffff; }
   .btn_white {
-    border: 1px solid #ffffff; }
+    border: 1px solid #ffffff;
+    color: #ffffff; }
   .btn_round {
     padding: 0;
     width: 40px;
@@ -275,6 +276,57 @@ button {
     .card .btn span {
       margin-right: 10px; }
 
+.achivements {
+  margin-bottom: 100px;
+  background: #36AFD9;
+  color: #ffffff; }
+  .achivements .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 75px 0; }
+  .achivements__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 50%; }
+  .achivements__item {
+    width: 46%;
+    background: #61c0e1;
+    margin: 2%;
+    padding: 25px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 10px;
+    min-width: 210px; }
+    .achivements__item:nth-child(odd) .counter::after {
+      content: '+'; }
+    .achivements__item:last-child .counter::after {
+      content: '%'; }
+  .achivements__more {
+    width: 40%;
+    margin-right: 5%; }
+    .achivements__more p {
+      margin: 30px 0; }
+
+.counter {
+  font-size: 50px;
+  font-weight: 500; }
+
+h2, p {
+  color: inherit; }
+
 @media (max-width: 968px) {
   h1 {
     font-size: 40px; }
@@ -342,7 +394,15 @@ button {
       margin-left: 5%; }
       .offer__image_support {
         width: 70%;
-        margin-left: 15%; } }
+        margin-left: 15%; }
+  .achivements .container {
+    display: block; }
+  .achivements__content {
+    width: 75%;
+    margin: 0 auto; }
+  .achivements__more {
+    width: 75%;
+    margin: 50px auto 0; } }
 
 @media (max-width: 768px) {
   h2 {
@@ -356,4 +416,15 @@ button {
     .offer__content h2 {
       max-width: 400px; }
   .services__title {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .achivements__content {
+    width: 90%; }
+  .achivements__item .counter {
+    font-size: 60px; }
+  .achivements__item p {
+    font-size: 16px; } }
+
+@media (max-width: 576px) {
+  .achivements__item {
+    width: 80%;
+    margin-bottom: 25px; } }

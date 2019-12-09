@@ -77,6 +77,7 @@ button
 			color: #ffffff
 	&_white
 		border: 1px solid #ffffff
+		color: #ffffff
 	&_round
 		padding: 0
 		+size(40,40)
@@ -223,5 +224,47 @@ button
 			color: $secondary
 		span
 			margin-right: 10px
+
+// Achivements
+
+.achivements
+	margin-bottom: 100px
+	background: $secondary
+	color: #ffffff
+	.container
+		display: flex
+		justify-content: space-between
+		align-items: center
+		padding: 75px 0
+	&__content
+		display: flex
+		justify-content: center
+		flex-wrap: wrap
+		width: 50%
+	&__item
+		width: 46%
+		background: lighten($secondary, 10)
+		margin: 2%
+		padding: 25px
+		box-sizing: border-box
+		border-radius: 10px
+		min-width: 210px
+		&:nth-child(odd) .counter::after
+			content: '+'
+		&:last-child .counter::after
+			content: '%'
+	&__more
+		width: 40%
+		margin-right: 5%
+		p
+			margin: 30px 0
+
+.counter
+	font-size: 50px
+	font-weight: 500
+
+h2, p
+	color: inherit
+
 
 @import '_media'
