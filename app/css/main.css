@@ -114,7 +114,8 @@ button {
   position: fixed;
   left: 0;
   right: 0;
-  background: #ffffff; }
+  background: #ffffff;
+  z-index: 10; }
   .header__top .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -223,6 +224,9 @@ button {
       line-height: 1.75; }
   .offer__image {
     width: 60%; }
+    .offer__image_support {
+      width: 50%;
+      margin-right: 5%; }
 
 .services__title {
   margin-bottom: 30px;
@@ -330,11 +334,15 @@ button {
     display: block;
     padding-top: 100px; }
     .offer__content {
-      width: 100%;
+      width: 90%;
+      margin-left: 5%;
       height: 300px; }
     .offer__image {
       width: 90%;
-      margin-left: 5%; } }
+      margin-left: 5%; }
+      .offer__image_support {
+        width: 70%;
+        margin-left: 15%; } }
 
 @media (max-width: 768px) {
   h2 {
