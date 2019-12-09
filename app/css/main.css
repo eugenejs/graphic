@@ -99,6 +99,9 @@ button {
   .btn_white {
     border: 1px solid #ffffff;
     color: #ffffff; }
+    .btn_white:hover {
+      background: #fff;
+      color: #36AFD9; }
   .btn_round {
     padding: 0;
     width: 40px;
@@ -184,6 +187,16 @@ button {
 .animated {
   z-index: -1; }
 
+.circle {
+  width: 90px;
+  height: 90px;
+  background: #36AFD9;
+  border-radius: 50%;
+  font-size: 30px;
+  text-align: center;
+  line-height: 90px;
+  color: #ffffff; }
+
 .offer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -254,14 +267,6 @@ button {
     -webkit-box-shadow: 0 0 30px #cccccc;
     box-shadow: 0 0 30px #cccccc; }
   .card__icon {
-    width: 90px;
-    height: 90px;
-    background: #36AFD9;
-    border-radius: 50%;
-    font-size: 30px;
-    text-align: center;
-    line-height: 90px;
-    color: #ffffff;
     margin-bottom: 40px; }
   .card p {
     margin: 20px 0; }
@@ -277,7 +282,6 @@ button {
       margin-right: 10px; }
 
 .achivements {
-  margin-bottom: 100px;
   background: #36AFD9;
   color: #ffffff; }
   .achivements .container {
@@ -326,6 +330,76 @@ button {
 
 h2, p {
   color: inherit; }
+
+.work {
+  margin-top: 100px; }
+  .work__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin-top: 50px; }
+  .work__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 500px;
+    position: relative; }
+    .work__content_1 {
+      margin: 0 75px 0 100px;
+      width: 600px; }
+      .work__content_1 .arrow {
+        -webkit-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+        right: 95%; }
+    .work__content_2 {
+      margin: 0 75px 0 0; }
+      .work__content_2 .arrow {
+        right: 40%; }
+    .work__content_3 {
+      margin: 0 175px 0 125px; }
+      .work__content_3 .arrow {
+        right: 93%; }
+    .work__content_4 {
+      margin: 0 75px 0 0; }
+      .work__content_4 .arrow {
+        -webkit-transform: scale(-1, 1);
+        transform: scale(-1, 1);
+        right: 10%; }
+    .work__content_5 {
+      margin: 0 155px 0 100px; }
+    .work__content .circle {
+      margin-right: 30px;
+      min-width: 90px;
+      font-size: 36px;
+      font-weight: 500; }
+    .work__content .arrow {
+      position: absolute;
+      height: 250px;
+      top: 70%; }
+  .work img {
+    height: 350px; }
+  .work p {
+    margin-top: 15px; }
+  .work h2 {
+    margin-bottom: 100px; }
+
+@media (max-width: 1200px) {
+  .work__item {
+    margin-top: 0; }
+  .work__content_1 {
+    padding-left: 100px; }
+  .work__content {
+    margin: 0; }
+  .work img {
+    margin: 0 auto; }
+  .work .arrow {
+    display: none; } }
 
 @media (max-width: 968px) {
   h1 {
@@ -402,7 +476,11 @@ h2, p {
     margin: 0 auto; }
   .achivements__more {
     width: 75%;
-    margin: 50px auto 0; } }
+    margin: 50px auto 0; }
+  .work {
+    margin-top: 50px; }
+    .work h2 {
+      margin-bottom: 50px; } }
 
 @media (max-width: 768px) {
   h2 {
@@ -422,9 +500,42 @@ h2, p {
   .achivements__item .counter {
     font-size: 60px; }
   .achivements__item p {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .work__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse; }
+    .work__item:nth-child(odd) {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; }
+  .work__content {
+    width: 90%;
+    margin: 50px 0; }
+    .work__content_1 {
+      padding: 0; }
+    .work__content .circle {
+      font-size: 22px;
+      width: 50px;
+      min-width: 50px;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 20px; }
+  .work img {
+    height: auto;
+    width: 100%;
+    max-height: 300px; }
+  .work h2 {
+    text-align: center;
+    margin: 0; } }
 
 @media (max-width: 576px) {
   .achivements__item {
     width: 80%;
-    margin-bottom: 25px; } }
+    margin-bottom: 25px; }
+  .work__content {
+    display: block; }
+  .work__text {
+    width: 100%; } }
