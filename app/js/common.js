@@ -27,6 +27,30 @@ $( document ).ready(function() {
 	  );
 	  wow.init();
 
+
+
+	$(document).ready(function(){
+		$('.owl-carousel').owlCarousel({
+			items : 1,
+			loop : true,
+			dots: false,
+			nav: false,
+			responsiveClass:true,
+			navText : ["<i class='fas fa-long-arrow-alt-left'>","<i class='fas fa-long-arrow-alt-right'></i>"],
+			responsive:{
+				768:{
+					items: 3,
+					nav: true,
+				},
+				576:{
+					items: 2
+				}
+			}
+		});
+	});
+
+
+
 });
 
 var a = 0;

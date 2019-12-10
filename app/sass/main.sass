@@ -62,25 +62,25 @@ button
 	&_standart
 		padding-right: 10px
 		&:hover
-			color: $secondary
+			color: $accent
 	&_blue
 		color: #ffffff
-		background: $secondary
-		box-shadow: 0 0 20px lighten($secondary, 25)
+		background: $accent
+		box-shadow: 0 0 20px lighten($accent, 25)
 		&:hover
 			background: $third
 			box-shadow: 0 0 20px lighten($third, 25)
 	&_black
 		border: 1px solid #D9D9D9
 		&:hover
-			background: $secondary
+			background: $accent
 			color: #ffffff
 	&_white
 		border: 1px solid #ffffff
 		color: #ffffff
 		&:hover
 			background: #fff
-			color: $secondary
+			color: $accent
 	&_round
 		padding: 0
 		+size(40,40)
@@ -124,7 +124,7 @@ button
 			position: absolute
 			z-index: -1
 			margin-left: -3px
-			background: $accent
+			background: #0a5a86
 			border-radius: 45px / 60px
 			width: 38px
 			height: 50px
@@ -157,7 +157,7 @@ button
 
 .circle
 	+size(90,90)
-	background: $secondary
+	background: $accent
 	border-radius: 50%
 	font-size: 30px
 	text-align: center
@@ -184,8 +184,8 @@ button
 			margin-left: 15px
 		.btn_round
 			&:hover
-				color: $secondary
-				border-color: $secondary
+				color: $accent
+				border-color: $accent
 		p
 			margin: 25px 0
 			line-height: 1.75
@@ -226,14 +226,14 @@ button
 		position: absolute
 		bottom: 40px
 		&:hover
-			color: $secondary
+			color: $accent
 		span
 			margin-right: 10px
 
 // Achivements
 
 .achivements
-	background: $secondary
+	background: $accent
 	color: #ffffff
 	.container
 		display: flex
@@ -247,7 +247,7 @@ button
 		width: 50%
 	&__item
 		width: 46%
-		background: lighten($secondary, 10)
+		background: lighten($accent, 10)
 		margin: 2%
 		padding: 25px
 		box-sizing: border-box
@@ -262,19 +262,20 @@ button
 		margin-right: 5%
 		p
 			margin: 30px 0
+	h2, p
+		color: inherit
 
 .counter
 	font-size: 50px
 	font-weight: 500
 
-h2, p
-	color: inherit
+
 
 // Work
 
 
 .work
-	margin-top: 100px
+	margin: 100px 0 50px
 	&__item
 		display: flex
 		justify-content: flex-end
@@ -320,4 +321,66 @@ h2, p
 		margin-top: 15px
 	h2
 		margin-bottom: 100px
+
+// Projects
+
+.projects
+	background: #F9FBFF
+	padding: 50px 0 150px
+	&__header
+		display: flex
+		justify-content: space-between
+		align-items: center
+		margin-bottom: 100px
+	&__item
+		margin: 50px auto
+		height: 350px
+		width: 80%
+		border-radius: 10px
+		overflow: hidden
+		box-shadow: 0 0 30px darken(#d9d9d9, 5)
+		&_1
+			background: url(..//img/slider/slide1.jpg) center / cover
+		&_2
+			background: url(..//img/slider/slide2.jpg) center / cover
+		&_3
+			background: url(..//img/slider/slide3.jpg) center / cover
+		&_4
+			background: url(..//img/slider/slide4.jpg) center / cover
+		&_5
+			background: url(..//img/slider/slide5.jpg) center / cover
+		&:hover .projects__more
+			top: 0%
+	&__more
+		background: $accent
+		height: 100%
+		width: 100%
+		position: relative
+		top: 100%
+		padding: 40px
+		box-sizing: border-box
+		transition: .4s
+		i
+			margin-left: 10px
+		button
+			position: absolute
+			bottom: 30px
+			right: 30px
+			color: #ffffff
+			&:hover
+				color: #0a5a86
+		h3
+			text-align: center
+			font-size: 30px
+			color: #ffffff
+	.owl-nav
+		position: absolute
+		right: 50px
+		i
+			padding: 10px
+			color: #777777
+			font-size: 20px
+			transition: .3s
+			&:hover
+				color: #333333
 @import '_media'
