@@ -1,7 +1,17 @@
-.menu
+.menu-wrapper
 	position: fixed
 	left: 0
 	right: 0
-	height: 100px
 	background: #ffffff
+	z-index: 5
 	+shadow
+
+.menu
+	height: 100px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.navigation
+	li
+		display: inline-block

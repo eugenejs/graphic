@@ -12,18 +12,44 @@ body
 	font-family: 'Roboto'
 	font-weight: 300
 
+h1,h2,h3,h4,h5
+	margin: 0
+	line-height: 1
+	font-weight: 300
+h1
+	font-size: 55px
+
+h2
+	font-size: 40px
+
+h3
+	font-size: 22px
+
+p
+	font-size: 14px
+
+ul
+	margin: 0
+	padding: 0
+li
+	list-style: none
+a
+	text-decoration: none
+
 section, header
 	margin-bottom: 100px
 	border: 3px solid green
+
 .container
 	max-width: 1200px
 	padding: 0 15px
 	margin: 0 auto
 
-.offer
-	border: 5px solid $b
+.logo
+	height: 50px
 
 @import _menu
+@import _offer
 @import _header
 @import _services
 @import _support

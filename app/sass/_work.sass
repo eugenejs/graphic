@@ -5,9 +5,11 @@
 	border: 5px solid $b
 	margin-bottom: 50px
 	display: flex
+	align-items: center
 	&:nth-child(even)
-		justify-content: flex-end
-		.step__desc
+		flex-direction: row-reverse
+		justify-content: flex-start
+		.step__content
 			margin: 0 50px 0 0
 	&:nth-child(odd)
 		justify-content: center
@@ -17,7 +19,15 @@
 		height: 100%
 		width: 350px
 		background: lightgray
-	&__desc
-		height: 100%
-		width: 550px
-		background: $p
+	&__content
+		display: flex
+		align-items: center
+		width: 600px
+		border: 3px solid $p
+	&__count
+		height: 50px
+		min-width: 50px
+		border-radius: 50%
+		background: $accent
+	&__text
+		border: 3px solid $b

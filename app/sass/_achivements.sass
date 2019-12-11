@@ -5,6 +5,7 @@
 	display: grid
 	grid-template-columns: repeat(2,1fr)
 	justify-content: center
+	color: #ffffff
 	&__content
 		border: 5px solid $p
 		display: grid
@@ -13,7 +14,9 @@
 		justify-content: center
 	&__item
 		border: 1px solid
-		min-height: 200px
+		padding: 15px
+	&__counter
+		font-size: 40px
 
 @media(max-width: 968px)
 	.services
