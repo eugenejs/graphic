@@ -14,19 +14,24 @@ body
 
 h1,h2,h3,h4,h5
 	margin: 0
-	line-height: 1
+	line-height: 1.2
 	font-weight: 300
 h1
 	font-size: 55px
+	color: #333333
 
 h2
 	font-size: 40px
+	color: #444444
 
 h3
 	font-size: 22px
+	font-weight: 400
+	margin-bottom: 15px
 
 p
 	font-size: 14px
+	margin: 0
 
 ul
 	margin: 0
@@ -35,6 +40,8 @@ li
 	list-style: none
 a
 	text-decoration: none
+	color: #555555
+	transition: color .3s
 
 section, header
 	margin-bottom: 100px
@@ -48,7 +55,22 @@ section, header
 .logo
 	height: 50px
 
+.hamburger
+	display: none !important
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+	width: 25px !important
+	background-color: #222 !important
+.animated
+	z-index: -1
+
+@media(max-width: 768px)
+	h1
+		font-size: 40px
+	h2
+		font-size: 30px
+
 @import _menu
+@import _buttons
 @import _offer
 @import _header
 @import _services

@@ -1,18 +1,36 @@
 .projects-wrapper
 	background: #f9fbff
 	padding: 100px 0
+
 .projects
 	&__top
 		display: flex
 		justify-content: space-between
 		margin-bottom: 50px
 	&__title
-		background: $b
-		height: 50px
+
 .site
 	height: 400px
-	border: 1px solid
+	border-radius: 15px
+	overflow: hidden
+	width: 90%
+	margin: 20px auto
+	+shadow
+	&:hover .site__content
+		top: 0
+	&_1
+		background: url(..//img/slider/slide1.jpg) center / cover
+	&_2
+		background: url(..//img/slider/slide2.jpg) center / cover
+	&_3
+		background: url(..//img/slider/slide3.jpg) center / cover
+	&_4
+		background: url(..//img/slider/slide4.jpg) center / cover
+	&_5
+		background: url(..//img/slider/slide5.jpg) center / cover
 	&__content
+		background: $accent
+		color: #ffffff
 		padding: 50px
 		box-sizing: border-box
 		height: 100%
@@ -20,6 +38,22 @@
 		flex-direction: column
 		justify-content: space-between
 		align-items: center
-		button
-			align-self: flex-end
-			width: 100px
+		position: relative
+		top: 100%
+		transition: top .3s
+	button
+		align-self: flex-end
+		color: #ffffff
+		&:hover
+			color: $secondary
+
+.owl-nav
+	position: absolute
+	right: 0
+	i
+		font-size: 20px
+		padding: 10px
+		color: darken($gray,30)
+		transition: color .4s
+		&:hover
+			color: darken($gray,70)

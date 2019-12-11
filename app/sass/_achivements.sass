@@ -15,9 +15,25 @@
 	&__item
 		border: 1px solid
 		padding: 15px
+		border-radius: 10px
+		background: lighten($accent, 10)
 	&__counter
-		font-size: 40px
+		font-size: 55px
+		font-weight: 500
+	h2
+		color: #ffffff
+	.offer
+		margin-left: 50px
+		&__content
+			width: 100%
 
-@media(max-width: 968px)
-	.services
+@media(max-width: 992px)
+	.achivements
 		grid-template-columns: repeat(1,80%)
+		.offer
+			margin: 50px auto 0
+
+@media(max-width: 568px)
+	.achivements
+		&__content
+			grid-template-columns: repeat(1,90%)
