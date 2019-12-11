@@ -34,13 +34,13 @@ $( document ).ready(function() {
 			items : 1,
 			loop : true,
 			dots: false,
-			nav: false,
+			nav: true,
 			responsiveClass:true,
 			navText : ["<i class='fas fa-long-arrow-alt-left'>","<i class='fas fa-long-arrow-alt-right'></i>"],
 			responsive:{
 				968:{
 					items: 3,
-					nav: true,
+
 				},
 				768:{
 					items: 2
