@@ -149,10 +149,6 @@ section, header {
     -webkit-box-shadow: 0 0 20px #e2e2e2;
     box-shadow: 0 0 20px #e2e2e2;
     z-index: -100; }
-    .navigation .btn {
-      margin: 25px 0 0 25px;
-      width: calc(100% - 50px);
-      max-width: 250px; }
     .navigation li {
       display: block;
       width: 100%;
@@ -197,7 +193,8 @@ button {
   padding: 12px 22px;
   color: #555555;
   -webkit-transition: background, color, .3s;
-  transition: background, color, .3s; }
+  transition: background, color, .3s;
+  white-space: nowrap; }
   .btn:hover {
     color: #36AFD9; }
   .btn_black {
@@ -227,14 +224,31 @@ button {
     line-height: 35px;
     border: 1px solid #d9d9d9;
     border-radius: 50%;
-    font-size: 14px; }
-    .btn_round:hover {
-      background: #36AFD9;
-      color: #ffffff;
-      border-color: #36AFD9; }
+    font-size: 14px;
+    color: #555555;
+    -webkit-transition: background, color, .3s;
+    transition: background, color, .3s; }
+  .btn_video {
+    padding: 0; }
+    .btn_video span {
+      margin-left: 10px; }
+    .btn_video:hover .btn_round {
+      border-color: #36AFD9;
+      color: #36AFD9; }
+
+.footer .btn_round:hover {
+  background: #36AFD9;
+  color: #ffffff;
+  border-color: #36AFD9; }
 
 .header .btn_blue, .support .btn_blue {
   margin-right: 25px; }
+
+@media (max-width: 992px) {
+  .btn_nav {
+    margin: 25px 0 0 25px;
+    width: calc(100% - 50px);
+    max-width: 250px; } }
 
 @media (max-width: 568px) {
   .header .btn_blue, .header .btn_black, .support .btn_blue, .support .btn_black {
@@ -255,6 +269,8 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  .offer_header {
+    margin: 100px 0; }
   .offer_reverse {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -284,14 +300,12 @@ button {
     .offer h1, .offer h2, .offer p {
       margin-bottom: 20px; } }
 
+@media (max-width: 568px) {
+  .offer_header {
+    margin: 50px 0; } }
+
 .header {
   padding-top: 100px; }
-  .header .offer:first-child {
-    margin: 100px 0; }
-
-@media (max-width: 568px) {
-  .header .offer:first-child {
-    margin: 50px 0; } }
 
 .services {
   display: grid;
@@ -520,7 +534,10 @@ button {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
 
 .site {
   height: 400px;
