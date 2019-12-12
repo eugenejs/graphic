@@ -12,11 +12,14 @@
 		width: 60%
 	h1,h2,p
 		margin-bottom: 30px
-
+	h1
+		white-space: nowrap
 @media(max-width: 992px)
 	.offer
 		flex-direction: column-reverse
 		&__content
-			width: 90%
+			min-width: 90%
 		&__image
 			width: 90%
+		h1,h2,p
+			margin-bottom: 20px

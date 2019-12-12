@@ -23,7 +23,7 @@ $( document ).ready(function() {
 		$('.hamburger').toggleClass('is-active')
 
 		if($('.hamburger').hasClass('is-active')) $('.navigation').css({'left' : '0%', 'transition' : '.3s ease-out'})
-		else $('.navigation').css({'left' : '-50%', 'transition' : '.3s ease-out'})
+		else $('.navigation').css({'left' : '-100%', 'transition' : '.3s ease-out'})
 
 	});
 
