@@ -8,7 +8,6 @@
 		justify-content: space-between
 		margin-bottom: 50px
 		align-items: center
-	&__title
 
 .site
 	height: 400px
@@ -16,22 +15,22 @@
 	overflow: hidden
 	width: 90%
 	margin: 20px auto
+	max-width: 400px
 	+shadow
 	&:hover .site__content
 		top: 0
 	&_1
-		background: url(..//img/slider/slide1.jpg) center / cover
+		background: url(..//img/slider/slide1.jpg) top / cover
 	&_2
-		background: url(..//img/slider/slide2.jpg) center / cover
+		background: url(..//img/slider/slide2.jpg) top / cover
 	&_3
-		background: url(..//img/slider/slide3.jpg) center / cover
+		background: url(..//img/slider/slide3.jpg) top / cover
 	&_4
-		background: url(..//img/slider/slide4.jpg) center / cover
+		background: url(..//img/slider/slide4.jpg) top / cover
 	&_5
-		background: url(..//img/slider/slide5.jpg) center / cover
+		background: url(..//img/slider/slide5.jpg) top / cover
 	&__content
 		background: $accent
-		color: #ffffff
 		padding: 50px
 		box-sizing: border-box
 		height: 100%
@@ -42,7 +41,9 @@
 		position: relative
 		top: 100%
 		transition: top .3s
-	button
+	h3
+		color: #ffffff
+	.btn
 		align-self: flex-end
 		color: #ffffff
 		&:hover
@@ -58,3 +59,21 @@
 		transition: color .4s
 		&:hover
 			color: darken($gray,70)
+
+@media (max-width: 768px)
+	.projects
+		&__top
+			flex-direction: column
+			text-align: center
+		.btn
+			margin-top: 25px
+			width: 75%
+			max-width: 250px
+	.site
+		height: 350px
+		&__content
+			top: 0
+			background: rgba($accent, .85)
+			transition: .3s
+			&:hover
+				background: rgba($accent, .9)

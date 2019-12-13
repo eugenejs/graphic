@@ -65,8 +65,7 @@ a {
   transition: color .3s; }
 
 section, header {
-  margin-bottom: 100px;
-  border: 3px solid green; }
+  margin-bottom: 100px; }
 
 .container {
   max-width: 1200px;
@@ -563,23 +562,23 @@ button {
   overflow: hidden;
   width: 90%;
   margin: 20px auto;
+  max-width: 400px;
   -webkit-box-shadow: 0 0 20px #e2e2e2;
   box-shadow: 0 0 20px #e2e2e2; }
   .site:hover .site__content {
     top: 0; }
   .site_1 {
-    background: url(..//img/slider/slide1.jpg) center/cover; }
+    background: url(..//img/slider/slide1.jpg) top/cover; }
   .site_2 {
-    background: url(..//img/slider/slide2.jpg) center/cover; }
+    background: url(..//img/slider/slide2.jpg) top/cover; }
   .site_3 {
-    background: url(..//img/slider/slide3.jpg) center/cover; }
+    background: url(..//img/slider/slide3.jpg) top/cover; }
   .site_4 {
-    background: url(..//img/slider/slide4.jpg) center/cover; }
+    background: url(..//img/slider/slide4.jpg) top/cover; }
   .site_5 {
-    background: url(..//img/slider/slide5.jpg) center/cover; }
+    background: url(..//img/slider/slide5.jpg) top/cover; }
   .site__content {
     background: #36AFD9;
-    color: #ffffff;
     padding: 50px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -601,11 +600,13 @@ button {
     top: 100%;
     -webkit-transition: top .3s;
     transition: top .3s; }
-  .site button {
+  .site h3 {
+    color: #ffffff; }
+  .site .btn {
     -ms-flex-item-align: end;
     align-self: flex-end;
     color: #ffffff; }
-    .site button:hover {
+    .site .btn:hover {
       color: #005A89; }
 
 .owl-nav {
@@ -620,6 +621,27 @@ button {
     .owl-nav i:hover {
       color: #272727; }
 
+@media (max-width: 768px) {
+  .projects__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center; }
+  .projects .btn {
+    margin-top: 25px;
+    width: 75%;
+    max-width: 250px; }
+  .site {
+    height: 350px; }
+    .site__content {
+      top: 0;
+      background: rgba(54, 175, 217, 0.85);
+      -webkit-transition: .3s;
+      transition: .3s; }
+      .site__content:hover {
+        background: rgba(54, 175, 217, 0.9); } }
+
 .contact {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -627,15 +649,14 @@ button {
   -ms-flex-pack: distribute;
   justify-content: space-around; }
   .contact__image {
-    width: 50%;
-    border: 3px solid lightpink; }
+    width: 50%; }
   .contact__form {
-    width: 40%;
-    border: 3px solid lightblue;
+    width: 450px;
+    -webkit-box-shadow: 0 0 20px #e2e2e2;
+    box-shadow: 0 0 20px #e2e2e2;
     padding: 50px;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    min-width: 400px; }
+    box-sizing: border-box; }
   .contact h2 {
     margin-bottom: 50px; }
   .contact input, .contact textarea {
@@ -647,7 +668,9 @@ button {
     padding: 10px;
     color: #b3b3b3;
     border-radius: 5px;
-    border: 1px solid #d9d9d9; }
+    border: 1px solid #d9d9d9;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
     .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
       color: #b3b3b3; }
     .contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
@@ -659,7 +682,7 @@ button {
     .contact input::placeholder, .contact textarea::placeholder {
       color: #b3b3b3; }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .contact {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -668,32 +691,45 @@ button {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    .contact__image {
-      width: 85%; }
     .contact__form {
-      margin-top: 50px;
-      min-width: 320px; } }
+      width: auto;
+      max-width: 500px;
+      margin-top: 50px; } }
+
+@media (max-width: 768px) {
+  .contact__image {
+    width: 75%; }
+  .contact h2 {
+    margin-bottom: 20px; } }
+
+@media (max-width: 568px) {
+  .contact__image {
+    width: 100%; }
+  .contact__form {
+    padding: 20px; }
+  .contact input, .contact textarea {
+    margin-bottom: 10px; } }
 
 .subscribe {
   padding: 100px 0;
   background: #F9FBFF; }
   .subscribe__title {
-    border: 1px solid;
     max-width: 600px;
     margin: 0 auto 25px;
     text-align: center; }
   .subscribe__form {
-    border: 1px solid;
-    height: 50px;
     margin: 0 auto;
     text-align: center; }
   .subscribe input {
-    width: 25%;
+    width: 290px;
     font-size: 16px;
     padding: 10px;
     color: #b3b3b3;
     border-radius: 5px;
-    border: 1px solid #d9d9d9; }
+    border: 1px solid #d9d9d9;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-bottom: 25px; }
     .subscribe input::-webkit-input-placeholder {
       color: #b3b3b3; }
     .subscribe input::-moz-placeholder {
@@ -705,18 +741,13 @@ button {
     .subscribe input::placeholder {
       color: #b3b3b3; }
 
-@media (max-width: 992px) {
-  .subscribe input {
-    width: 35%; } }
-
 @media (max-width: 768px) {
-  .subscribe input {
-    width: 50%; } }
+  .subscribe {
+    padding: 50px 0; } }
 
 @media (max-width: 568px) {
-  .subscribe input {
-    width: 90%;
-    margin-bottom: 25px; } }
+  .subscribe .btn {
+    width: 290px; } }
 
 .footer__content {
   display: -webkit-box;
@@ -726,10 +757,10 @@ button {
   flex-wrap: wrap; }
 
 .footer__col {
-  width: 25%;
-  border: 1px solid;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  width: 25%; }
+
+.footer__contacts:nth-child(2) {
+  margin-top: 17px; }
 
 .footer__contacts span {
   color: #005A89;
@@ -738,7 +769,6 @@ button {
 
 .footer__bottom {
   height: 100px;
-  border: 1px solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -750,19 +780,17 @@ button {
   align-items: center; }
   .footer__bottom span {
     display: block;
-    border: 1px solid; }
-
-.footer img {
-  height: 50px; }
+    font-size: 14px;
+    color: #444444; }
 
 .footer h3 {
-  margin-bottom: 35px; }
+  margin: 15px 0 35px; }
 
 .footer p {
   margin-bottom: 25px; }
 
 .footer li {
-  margin-bottom: 10px;
+  padding: 5px 0;
   -webkit-transition: color .3s;
   transition: color .3s;
   cursor: pointer; }
@@ -783,7 +811,7 @@ button {
   .footer__col {
     width: 100%;
     text-align: center;
-    margin: 25px 0; }
+    margin: 10px 0; }
   .footer__bottom {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
