@@ -73,6 +73,12 @@ section, header {
   padding: 0 15px;
   margin: 0 auto; }
 
+.animated {
+  z-index: -1; }
+
+.wow {
+  overflow: hidden; }
+
 @media (max-width: 768px) {
   h1 {
     font-size: 40px; }
@@ -81,12 +87,17 @@ section, header {
   section, header {
     margin-bottom: 50px; } }
 
+@media (max-width: 768px) {
+  section, header {
+    overflow: hidden; } }
+
 .menu-wrapper {
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   background: #ffffff;
-  z-index: 100; }
+  z-index: 200; }
 
 .menu {
   height: 85px;
@@ -259,7 +270,9 @@ button {
   .header .btn_round, .support .btn_round {
     margin-bottom: 25px; }
   .btns {
-    text-align: center; } }
+    text-align: center; }
+  .btn_nav {
+    max-width: 100%; } }
 
 .offer {
   display: -webkit-box;
@@ -310,6 +323,7 @@ button {
   padding-top: 100px; }
 
 .services {
+  padding-bottom: 25px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(340px, 340px));
   grid-gap: 30px;
@@ -505,7 +519,9 @@ button {
     border-radius: 50%;
     background: #36AFD9;
     font-weight: 500;
-    margin-right: 25px; }
+    margin-right: 25px;
+    -webkit-box-shadow: 0 0 10px #76c9e5;
+    box-shadow: 0 0 10px #76c9e5; }
   .step__text {
     position: relative; }
 
@@ -531,10 +547,12 @@ button {
       width: 100%;
       margin: 25px auto !important; }
     .work .step__count {
-      height: 50px;
-      min-width: 50px;
-      line-height: 50px;
-      font-size: 24px; } }
+      height: 65px;
+      min-width: 65px;
+      line-height: 65px;
+      font-size: 26px; }
+    .work .step__text {
+      margin: 25px 0; } }
 
 @media (max-width: 568px) {
   .work .step__content {
@@ -656,7 +674,8 @@ button {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-  justify-content: space-around; }
+  justify-content: space-around;
+  padding-bottom: 25px; }
   .contact__image {
     width: 50%; }
   .contact__form {
