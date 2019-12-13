@@ -1,5 +1,5 @@
 .subscribe
-	padding: 100px 0
+	padding: 75px 0
 	background: #F9FBFF
 	&__title
 		max-width: 600px
@@ -9,20 +9,30 @@
 		margin: 0 auto
 		text-align: center
 	input
-		width: 290px
+		width: 450px
 		font-size: 16px
-		padding: 10px
-		color: darken($gray, 15)
+		padding: 15px 20px
+		color: darken($gray, 10)
+		font-weight: 300
+		font-size: 14px
 		border-radius: 5px
-		border: 1px solid $gray
 		box-sizing: border-box
 		margin-bottom: 25px
+		border: none
+		font-family: inherit
+		font-weight: 300
+		+shadow
 		&::placeholder
-			color: darken($gray, 15)
+			color: darken($gray, 10)
+	.btn
+		padding: 15px 20px
+
 
 @media(max-width: 768px)
 	.subscribe
 		padding: 50px 0
+		input
+			width: 290px
 
 @media(max-width: 568px)
 	.subscribe

@@ -50,7 +50,7 @@ h3 {
 p {
   font-size: 14px;
   margin: 0;
-  color: #555555; }
+  color: #666666; }
 
 ul {
   margin: 0;
@@ -61,7 +61,7 @@ li {
 
 a {
   text-decoration: none;
-  color: #555555;
+  color: #666666;
   -webkit-transition: color .3s;
   transition: color .3s; }
 
@@ -119,7 +119,7 @@ section, header {
     display: block;
     width: 0;
     height: 1px;
-    background: #555555;
+    background: #999999;
     -webkit-transition: width .3s;
     transition: width .3s; }
   .navigation li:not(:last-child) a:hover::after {
@@ -225,7 +225,7 @@ button {
     border: 1px solid #d9d9d9;
     border-radius: 50%;
     font-size: 14px;
-    color: #555555;
+    color: #666666;
     -webkit-transition: background, color, .3s;
     transition: background, color, .3s; }
   .btn_video {
@@ -613,7 +613,10 @@ button {
     align-self: flex-end;
     color: #ffffff; }
     .site .btn:hover {
-      color: #005A89; }
+      color: #b7e2f1; }
+  .site i {
+    font-size: 14px;
+    margin-left: 10px; }
 
 .owl-nav {
   position: absolute;
@@ -671,22 +674,24 @@ button {
     resize: none;
     font-size: 16px;
     font-family: inherit;
-    padding: 10px;
-    color: #b3b3b3;
+    padding: 15px 20px;
+    color: silver;
+    font-weight: 300;
     border-radius: 5px;
     border: 1px solid #d9d9d9;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    font-size: 14px; }
     .contact input::-webkit-input-placeholder, .contact textarea::-webkit-input-placeholder {
-      color: #b3b3b3; }
+      color: silver; }
     .contact input::-moz-placeholder, .contact textarea::-moz-placeholder {
-      color: #b3b3b3; }
+      color: silver; }
     .contact input:-ms-input-placeholder, .contact textarea:-ms-input-placeholder {
-      color: #b3b3b3; }
+      color: silver; }
     .contact input::-ms-input-placeholder, .contact textarea::-ms-input-placeholder {
-      color: #b3b3b3; }
+      color: silver; }
     .contact input::placeholder, .contact textarea::placeholder {
-      color: #b3b3b3; }
+      color: silver; }
 
 @media (max-width: 992px) {
   .contact {
@@ -717,7 +722,7 @@ button {
     margin-bottom: 10px; } }
 
 .subscribe {
-  padding: 100px 0;
+  padding: 75px 0;
   background: #F9FBFF; }
   .subscribe__title {
     max-width: 600px;
@@ -727,29 +732,39 @@ button {
     margin: 0 auto;
     text-align: center; }
   .subscribe input {
-    width: 290px;
+    width: 450px;
     font-size: 16px;
-    padding: 10px;
-    color: #b3b3b3;
+    padding: 15px 20px;
+    color: silver;
+    font-weight: 300;
+    font-size: 14px;
     border-radius: 5px;
-    border: 1px solid #d9d9d9;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    margin-bottom: 25px; }
+    margin-bottom: 25px;
+    border: none;
+    font-family: inherit;
+    font-weight: 300;
+    -webkit-box-shadow: 0 0 20px #e2e2e2;
+    box-shadow: 0 0 20px #e2e2e2; }
     .subscribe input::-webkit-input-placeholder {
-      color: #b3b3b3; }
+      color: silver; }
     .subscribe input::-moz-placeholder {
-      color: #b3b3b3; }
+      color: silver; }
     .subscribe input:-ms-input-placeholder {
-      color: #b3b3b3; }
+      color: silver; }
     .subscribe input::-ms-input-placeholder {
-      color: #b3b3b3; }
+      color: silver; }
     .subscribe input::placeholder {
-      color: #b3b3b3; }
+      color: silver; }
+  .subscribe .btn {
+    padding: 15px 20px; }
 
 @media (max-width: 768px) {
   .subscribe {
-    padding: 50px 0; } }
+    padding: 50px 0; }
+    .subscribe input {
+      width: 290px; } }
 
 @media (max-width: 568px) {
   .subscribe .btn {
@@ -760,21 +775,24 @@ button {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  margin-bottom: 25px; }
 
 .footer__col {
   width: 25%; }
 
-.footer__contacts:nth-child(2) {
-  margin-top: 17px; }
-
-.footer__contacts span {
-  color: #005A89;
-  font-weight: 400;
-  margin-right: 10px; }
+.footer__contacts {
+  color: #666666; }
+  .footer__contacts:nth-child(2) {
+    margin-top: 17px; }
+  .footer__contacts span {
+    color: #005A89;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 10px; }
 
 .footer__bottom {
-  height: 100px;
+  height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -786,8 +804,8 @@ button {
   align-items: center; }
   .footer__bottom span {
     display: block;
-    font-size: 14px;
-    color: #444444; }
+    font-size: 12px;
+    color: #666666; }
 
 .footer h3 {
   margin: 15px 0 35px; }
@@ -799,12 +817,13 @@ button {
   padding: 5px 0;
   -webkit-transition: color .3s;
   transition: color .3s;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 14px; }
   .footer li:hover a {
     color: #36AFD9; }
 
 .footer .btn {
-  margin-right: 15px; }
+  margin-right: 5px; }
 
 @media (max-width: 992px) {
   .footer__content {
