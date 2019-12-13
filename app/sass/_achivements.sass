@@ -6,7 +6,6 @@
 	display: flex
 	flex-wrap: wrap
 	justify-content: center
-
 	&__content
 		flex-grow: 1
 		width: 650px
@@ -21,6 +20,10 @@
 		border-radius: 10px
 		background: lighten($accent, 10)
 		box-sizing: border-box
+		&:nth-child(odd) .achivements__counter::after
+			content: '+'
+		&:last-child .achivements__counter::after
+			content: '%'
 	&__counter
 		font-size: 55px
 		font-weight: 500

@@ -25,7 +25,8 @@ body {
   min-width: 320px;
   margin: 0;
   font-family: 'Roboto';
-  font-weight: 300; }
+  font-weight: 300;
+  overflow-x: hidden; }
 
 h1, h2, h3, h4, h5 {
   margin: 0;
@@ -84,13 +85,11 @@ section, header {
   position: fixed;
   left: 0;
   right: 0;
-  -webkit-box-shadow: 0 0 20px #e2e2e2;
-  box-shadow: 0 0 20px #e2e2e2;
   background: #ffffff;
   z-index: 100; }
 
 .menu {
-  height: 100px;
+  height: 85px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,8 +129,8 @@ section, header {
   .hamburger {
     display: block !important; }
   .menu-wrapper {
-    -webkit-box-shadow: none;
-    box-shadow: none; }
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; }
   .menu {
     width: 100%;
     -webkit-box-shadow: 0 0 20px #e2e2e2;
@@ -266,6 +265,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
@@ -277,7 +279,7 @@ button {
     -ms-flex-direction: row-reverse;
     flex-direction: row-reverse; }
   .offer__content {
-    width: 35%;
+    width: 40%;
     min-width: 375px; }
   .offer__image {
     width: 60%;
@@ -389,6 +391,10 @@ button {
     background: #61c0e1;
     -webkit-box-sizing: border-box;
     box-sizing: border-box; }
+    .achivements__item:nth-child(odd) .achivements__counter::after {
+      content: '+'; }
+    .achivements__item:last-child .achivements__counter::after {
+      content: '%'; }
   .achivements__counter {
     font-size: 55px;
     font-weight: 500;

@@ -28,18 +28,18 @@ $( document ).ready(function() {
 	});
 
 
-// 	var wow = new WOW(
-// 		{
-// 		  boxClass:     'wow',
-// 		  animateClass: 'animated',
-// 		  offset:       0,
-// 		  mobile:       true,
-// 		  live:         true,
-// 		  callback:     function(box) {},
-// 		  scrollContainer: null
-// 		}
-// 	  );
-// 	  wow.init();
+	var wow = new WOW(
+		{
+		  boxClass:     'wow',
+		  animateClass: 'animated',
+		  offset:       0,
+		  mobile:       true,
+		  live:         true,
+		  callback:     function(box) {},
+		  scrollContainer: null
+		}
+	  );
+	  wow.init();
 
 
 
@@ -52,35 +52,38 @@ $(window).resize(function (){
 
 });
 
-// var a = 0;
-// $(window).scroll(function(){
+var a = 0;
+$(window).scroll(function(){
 
-// 	var oTop = $('.achivements__item').offset().top - window.innerHeight;
-// 	if (a == 0 && $(window).scrollTop() > oTop) {
-// 		$('.counter').each(function() {
-// 		var $this = $(this),
-// 			countTo = $this.attr('data-count');
-// 		$({
-// 			countNum: $this.text()
-// 		}).animate({
-// 			countNum: countTo
-// 			},
+	var oTop = $('.achivements__item').offset().top - window.innerHeight;
+	if (a == 0 && $(window).scrollTop() > oTop) {
+		$('.achivements__counter').each(function() {
+		var $this = $(this),
+			countTo = $this.attr('data-count');
+		$({
+			countNum: $this.text()
+		}).animate({
+			countNum: countTo
+			},
 
-// 			{
+			{
 
-// 			duration: 1500,
-// 			easing: 'swing',
-// 			step: function() {
-// 				$this.text(Math.floor(this.countNum));
-// 			},
-// 			complete: function() {
-// 				$this.text(this.countNum);
-// 			}
+			duration: 1500,
+			easing: 'swing',
+			step: function() {
+				$this.text(Math.floor(this.countNum));
+			},
+			complete: function() {
+				$this.text(this.countNum);
+			}
 
-// 			});
-// 		});
-// 		a = 1;
-// 	}
+			});
+		});
+		a = 1;
+	}
+
+	if($(this).scrollTop() > 100) $('.menu-wrapper').css({'box-shadow' : '0 0 20px #D9D9D9', 'transition' : '.5s'})
+	else $('.menu-wrapper').css({'box-shadow' : '0 0 0 #D9D9D9', 'transition' : '.5s'})
 
 
-// });
+});
