@@ -1,38 +1,57 @@
 .achivements-wrapper
 	background: $accent
 	padding: 100px 0
+
 .achivements
-	display: grid
-	grid-template-columns: repeat(2,1fr)
+	display: flex
+	flex-wrap: wrap
 	justify-content: center
-	color: #ffffff
+
 	&__content
-		border: 5px solid $p
+		flex-grow: 1
+		width: 650px
 		display: grid
-		grid-template-columns: repeat(2,1fr)
-		grid-gap: 30px
+		grid-template-columns: repeat(auto-fit,minmax(310px,310px))
 		justify-content: center
+		grid-gap: 30px
 	&__item
+		width: 300px
+		max-width: 400px
 		padding: 15px
 		border-radius: 10px
 		background: lighten($accent, 10)
+		box-sizing: border-box
 	&__counter
 		font-size: 55px
 		font-weight: 500
-	h2
+		color: #ffffff
+	h2,p
 		color: #ffffff
 	.offer
-		margin-left: 50px
+		flex-grow: 1
+		width: 320px
 		&__content
 			width: 100%
+			min-width: 300px
 
 @media(max-width: 992px)
 	.achivements
-		grid-template-columns: repeat(1,80%)
 		.offer
-			margin: 50px auto 0
+			margin-top: 50px
+
+
+@media(max-width: 768px)
+	.achivements
+		&__content
+			grid-template-columns: 1fr
+		&__item
+			margin: 0 auto
+			width: 70%
+			padding: 20px
+			p
+				font-size: 18px
 
 @media(max-width: 568px)
 	.achivements
-		&__content
-			grid-template-columns: repeat(1,90%)
+		&__item
+			width: 90%

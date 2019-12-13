@@ -1,32 +1,32 @@
-.services-wrapper
 .services
 	display: grid
-	grid-template-columns: repeat(auto-fit, minmax(0px,320px))
+	grid-template-columns: repeat(auto-fit, minmax(340px,340px))
 	grid-gap: 30px
 	justify-content: center
 	&__title
 		grid-column: 1 / -1
 		padding: 25px 0
+
 .card
 	+shadow
-	padding: 30px
-	padding-bottom: 50px
+	padding: 30px 30px 50px 30px
 	position: relative
 	transition: box-shadow .4s
 	border-radius: 5px
+	max-width: 340px
 	margin: 0 auto
 	&:hover
-		box-shadow: 0 0 20px darken(#e2e2e2, 10)
+		box-shadow: 0 0 20px darken(#e2e2e2, 15)
 	&__icon
 		height: 75px
 		width: 75px
+		line-height: 75px
+		text-align: center
+		font-size: 22px
+		color: #ffffff
 		background: $accent
 		border-radius: 50%
 		margin-bottom: 40px
-		line-height: 75px
-		text-align: center
-		color: #ffffff
-		font-size: 22px
 	p
 		margin: 25px 0
 	button
@@ -39,4 +39,4 @@
 
 @media(max-width: 768px)
 	.services
-		grid-template-columns: repeat(auto-fit, minmax(0px,375px))
+		grid-template-columns: 1fr
