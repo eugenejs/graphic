@@ -110,7 +110,7 @@ $(window).scroll(function(){
 	if($(this).scrollTop() > 100) $('.menu-wrapper').css({'box-shadow' : '0 0 20px #D9D9D9', 'transition' : '.5s'})
 	else $('.menu-wrapper').css({'box-shadow' : '0 0 0 #D9D9D9', 'transition' : '.5s'})
 
-	if($(this).scrollTop() > 500) $('.btn_up').css({'bottom' : '50px'})
+	if($(this).scrollTop() > 500) $('.btn_up').css({'bottom' : '15px'})
 	else $('.btn_up').css({'bottom' : '-50px'})
 
 });

@@ -273,7 +273,10 @@ button {
   .btns {
     text-align: center; }
   .btn_nav {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .btn_up {
+    right: 15px;
+    padding: 8px 16px; } }
 
 .offer {
   display: -webkit-box;
