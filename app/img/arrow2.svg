@@ -1,1 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 619.51 386.41"><defs><style>.cls-1,.cls-2,.cls-3{fill:none;stroke:#0a5a86;stroke-linecap:round;stroke-width:3px;}.cls-1,.cls-2{stroke-miterlimit:10;}.cls-2{stroke-dasharray:16.25 16.25;}.cls-3{stroke-linejoin:round;}</style></defs><title>Ресурс 7</title><g id="Слой_2" data-name="Слой 2"><g id="Слой_1-2" data-name="Слой 1"><path class="cls-1" d="M17,368.5c1.28-2.36,2.57-4.7,3.85-7"/><path class="cls-2" d="M28.81,347.31C54.82,302,82.33,265.16,133,245.5c114-44.22,425,65.1,482.21-228.12"/><path class="cls-1" d="M616.7,9.39c.46-2.6.89-5.23,1.31-7.89"/><polyline class="cls-3" points="1.5 366.76 12.5 384.92 34.12 373.45"/></g></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 619.51 386.41">
+  <defs/>
+  <defs>
+    <style>
+      .cls-1{fill:none;stroke:#0a5a86;stroke-linecap:round;stroke-width:3px;stroke-miterlimit:10}
+    </style>
+  </defs>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="Слой_1-2" data-name="Слой 1">
+      <path d="M17 368.5c1.28-2.36 2.57-4.7 3.85-7" class="cls-1"/>
+      <path fill="none" stroke="#0a5a86" stroke-dasharray="16.25 16.25" stroke-linecap="round" stroke-miterlimit="10" stroke-width="3" d="M28.81 347.31C54.82 302 82.33 265.16 133 245.5c114-44.22 425 65.1 482.21-228.12"/>
+      <path d="M616.7 9.39c.46-2.6.89-5.23 1.31-7.89" class="cls-1"/>
+      <path fill="none" stroke="#0a5a86" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M1.5 366.76l11 18.16 21.62-11.47"/>
+    </g>
+  </g>
+</svg>

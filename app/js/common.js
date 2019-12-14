@@ -27,6 +27,31 @@ $( document ).ready(function() {
 
 	});
 
+	$("a[href='#top']").click(function() {
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+		return false;
+	});
+
+	$("a[href='#services']").click(function() {
+		$("html, body").animate({ scrollTop: $(".services").offset().top - 200 }, "slow");
+		return false;
+	});
+
+	$("a[href='#about']").click(function() {
+		$("html, body").animate({ scrollTop: $(".achivements").offset().top - 200 }, "slow");
+		return false;
+	});
+
+	$("a[href='#contacts']").click(function() {
+		$("html, body").animate({ scrollTop: $(".contact").offset().top - 200 }, "slow");
+		return false;
+	});
+
+	$("a[href='#subscribe']").click(function() {
+		$("html, body").animate({ scrollTop: $(".subscribe").offset().top - 200 }, "slow");
+		return false
+	});
+
 
 	var wow = new WOW(
 		{
@@ -42,15 +67,15 @@ $( document ).ready(function() {
 	  wow.init();
 
 
-
-
 });
+
 
 $(window).resize(function (){
 
 	if($('.hamburger').hasClass('is-active')) $('.hamburger').click()
 
 });
+
 
 var a = 0;
 $(window).scroll(function(){
@@ -85,5 +110,7 @@ $(window).scroll(function(){
 	if($(this).scrollTop() > 100) $('.menu-wrapper').css({'box-shadow' : '0 0 20px #D9D9D9', 'transition' : '.5s'})
 	else $('.menu-wrapper').css({'box-shadow' : '0 0 0 #D9D9D9', 'transition' : '.5s'})
 
+	if($(this).scrollTop() > 500) $('.btn_up').css({'bottom' : '50px'})
+	else $('.btn_up').css({'bottom' : '-50px'})
 
 });

@@ -73,22 +73,13 @@ section, header {
   padding: 0 15px;
   margin: 0 auto; }
 
-.animated {
-  z-index: -1; }
-
-.wow {
-  overflow: hidden; }
-
 @media (max-width: 768px) {
   h1 {
     font-size: 40px; }
   h2 {
     font-size: 30px; }
   section, header {
-    margin-bottom: 50px; } }
-
-@media (max-width: 768px) {
-  section, header {
+    margin-bottom: 50px;
     overflow: hidden; } }
 
 .menu-wrapper {
@@ -215,9 +206,11 @@ button {
       color: #ffffff; }
   .btn_white {
     border: 1px solid #ffffff;
-    color: #ffffff; }
+    color: #ffffff;
+    background: #36AFD9; }
     .btn_white:hover {
-      background: #ffffff; }
+      background: #ffffff;
+      border: 1px solid #36AFD9; }
   .btn_blue {
     color: #ffffff;
     background: #36AFD9;
@@ -246,6 +239,14 @@ button {
     .btn_video:hover .btn_round {
       border-color: #36AFD9;
       color: #36AFD9; }
+  .btn_up {
+    position: fixed;
+    bottom: -50px;
+    right: 50px;
+    cursor: pointer;
+    z-index: 100;
+    -webkit-transition: .4s;
+    transition: .4s; }
 
 .footer .btn_round:hover {
   background: #36AFD9;

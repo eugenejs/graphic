@@ -25,8 +25,10 @@ button
 	&_white
 		border: 1px solid #ffffff
 		color: #ffffff
+		background: $accent
 		&:hover
 			background: #ffffff
+			border: 1px solid $accent
 	&_blue
 		color: #ffffff
 		background: $accent
@@ -53,6 +55,13 @@ button
 		&:hover .btn_round
 			border-color: $accent
 			color: $accent
+	&_up
+		position: fixed
+		bottom: -50px
+		right: 50px
+		cursor: pointer
+		z-index: 100
+		transition: .4s
 
 .footer .btn_round:hover
 	background: $accent
