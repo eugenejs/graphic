@@ -29,26 +29,31 @@ $( document ).ready(function() {
 
 	$("a[href='#top']").click(function() {
 		$("html, body").animate({ scrollTop: 0 }, "slow");
+		if($('.hamburger').hasClass('is-active')) $('.hamburger').click()
 		return false;
 	});
 
 	$("a[href='#services']").click(function() {
 		$("html, body").animate({ scrollTop: $(".services").offset().top - 200 }, "slow");
+		if($('.hamburger').hasClass('is-active')) $('.hamburger').click()
 		return false;
 	});
 
 	$("a[href='#about']").click(function() {
 		$("html, body").animate({ scrollTop: $(".achivements").offset().top - 200 }, "slow");
+		if($('.hamburger').hasClass('is-active')) $('.hamburger').click()
 		return false;
 	});
 
 	$("a[href='#contacts']").click(function() {
 		$("html, body").animate({ scrollTop: $(".contact").offset().top - 200 }, "slow");
+		if($('.hamburger').hasClass('is-active')) $('.hamburger').click()
 		return false;
 	});
 
 	$("a[href='#subscribe']").click(function() {
 		$("html, body").animate({ scrollTop: $(".subscribe").offset().top - 200 }, "slow");
+		if($('.hamburger').hasClass('is-active')) $('.hamburger').click()
 		return false
 	});
 
