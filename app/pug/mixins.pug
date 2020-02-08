@@ -1,0 +1,42 @@
+mixin card(card_icon,card_title,card_text)
+	.card.wow.fadeInUp(data-wow-duration=".7s" data-wow-delay=".1s")
+		.card__icon
+			i.fas(class=card_icon)
+		h3=card_title
+		p=card_text
+		button.btn Читать далее
+			i.fas.fa-long-arrow-alt-right
+
+mixin work_step(step_number,step_fade,step_image_wow_duration,step_image_src,step_image_alt,step_data_wow_delay,step_count,step_title,step_desc,step_arrow_class,step_arrow_src)
+	.step(class=step_number)
+		img.step__image.wow(class=step_fade data-wow-duration=step_image_wow_duration src=step_image_src alt=step_image_alt)
+		.step__content.wow.fadeIn(data-wow-duration='.8s' data-wow-delay=step_data_wow_delay)
+			.step__count=step_count
+			.step__text
+				h3.step__title=step_title
+				p.step__desc=step_desc
+				img.arrow(class=step_arrow_class src=step_arrow_src alt="Arrow")
+
+mixin work_step_5(step_number,step_fade,step_image_wow_duration,step_image_src,step_image_alt,step_data_wow_delay,step_count,step_title,step_desc)
+	.step(class=step_number)
+		img.step__image.wow(class=step_fade data-wow-duration=step_image_wow_duration src=step_image_src alt=step_image_alt)
+		.step__content.wow.fadeIn(data-wow-duration='.8s' data-wow-delay=step_data_wow_delay)
+			.step__count=step_count
+			.step__text
+				h3.step__title=step_title
+				p.step__desc=step_desc
+
+mixin site_item(site_number,site_name)
+	.site(class=site_number)
+		.site__content
+			h3=site_name
+			button.btn Перейти на сайт
+				i.fas.fa-long-arrow-alt-right
+
+mixin link_lock(href,link)
+	li
+		a(href=href onclick="return false;")=link
+
+mixin link(href,link)
+	li
+		a(href=href)=link

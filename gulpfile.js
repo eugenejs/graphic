@@ -2,11 +2,10 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require('browser-sync');
 const npmDist = require('gulp-npm-dist');
-const rename = require('gulp-rename');
+const pug = require('gulp-pug');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglifyjs');
 const autoprefixer = require('gulp-autoprefixer');
-const sourcemaps = require('gulp-sourcemaps');
 const cssnano = require('gulp-cssnano');
 const imagemin = require('gulp-imagemin')
 const pngquant = require('imagemin-pngquant')
@@ -29,6 +28,17 @@ const pngquant = require('imagemin-pngquant')
         .pipe(browserSync.reload({stream: true}))
   });
 
+// Pug
+
+  gulp.task('pug', function(){
+    return gulp.src('app/pug/pages/**/*.pug')
+      .pipe(pug({
+        pretty: true,
+        basedir: 'app/pug'
+      }))
+      .pipe(gulp.dest('app/'))
+  });
+
 
 // Browser sync
 
@@ -48,6 +58,7 @@ const pngquant = require('imagemin-pngquant')
 
   gulp.task('watch', function() {
       gulp.watch('app/sass/*.sass', gulp.parallel('sass'));
+      gulp.watch('app/pug/**/*.pug', gulp.parallel('pug'));
       gulp.watch('app/*.html').on('change', browserSync.reload);
       gulp.watch('app/js/*.js').on('change', browserSync.reload);
   });
@@ -164,5 +175,5 @@ const pngquant = require('imagemin-pngquant')
 
 
 gulp.task('libsinit', gulp.series('libs','cssmin','jsmin','fontawesome'))
+gulp.task('watch', gulp.parallel('sass', 'pug', 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('build-css', 'build-fonts', 'build-js', 'build-html','img'));
-gulp.task('watch', gulp.parallel('sass', 'browser-sync', 'watch'));
