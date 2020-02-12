@@ -297,7 +297,9 @@ button {
   .btn_video {
     padding: 0; }
     .btn_video span {
-      margin-left: 10px; }
+      margin-left: 10px;
+      -webkit-transform: translateY(2px);
+      transform: translateY(2px); }
     .btn_video:hover .btn_round {
       border-color: #36AFD9;
       color: #36AFD9; }
