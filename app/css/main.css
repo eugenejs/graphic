@@ -809,6 +809,7 @@ button {
   width: 25%; }
 
 .footer__contacts {
+  display: inline-block;
   color: #666666; }
   .footer__contacts:nth-child(2) {
     margin-top: 17px; }
@@ -829,10 +830,12 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
-  .footer__bottom span {
+  .footer__bottom span, .footer__bottom a {
     display: block;
-    font-size: 12px;
+    font-size: 14px;
     color: #666666; }
+  .footer__bottom a:hover {
+    text-decoration: underline; }
 
 .footer h3 {
   margin: 15px 0 35px; }

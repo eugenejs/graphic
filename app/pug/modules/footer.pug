@@ -5,10 +5,10 @@ footer.footer-wrapper
 				.footer__col
 					a(href='')
 						img.logo(src="img/logo.svg" alt="")
-					.footer__contacts
+					a(href='tel:+').footer__contacts
 						span Телефон:
 						| + 123 45 678-90-12
-					.footer__contacts
+					a(href='mailto:@').footer__contacts
 						span E-mail:
 						| mail@mail.com
 				.footer__col
@@ -40,4 +40,4 @@ footer.footer-wrapper
 						i.fab.fa-twitter
 			.footer__bottom
 				span ©  2019 Graphic.
-				span Privacy Policy
+				a(href='#' onclick="return false;") Privacy Policy
