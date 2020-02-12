@@ -4,10 +4,10 @@
   "description": "",
   "main": "gulpfile.js",
   "dependencies": {
-    "jquery": "latest",
     "@fortawesome/fontawesome-free": "latest",
     "animate.css": "latest",
     "hamburgers": "latest",
+    "jquery": "latest",
     "owl.carousel": "latest",
     "wowjs": "latest"
   },

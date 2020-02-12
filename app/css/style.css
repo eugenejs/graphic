@@ -1,3 +1,81 @@
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 300;
+  src: url(..//fonts/Roboto-Light.woff2); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 400;
+  src: url(..//fonts/Roboto-Regular.woff2); }
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: 500;
+  src: url(..//fonts/Roboto-Medium.woff2); }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("..//fonts/icons.woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block; }
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-video:before {
+  content: "\e900"; }
+
+.icon-design:before {
+  content: "\e901";
+  font-size: 32px !important;
+  line-height: 2.3; }
+
+.icon-instagram:before {
+  content: "\e902"; }
+
+.icon-digital:before {
+  content: "\e903"; }
+
+.icon-triangle-right:before {
+  content: "\e904";
+  font-size: 20px; }
+
+.icon-twitter:before {
+  content: "\e90c"; }
+
+.icon-facebook:before {
+  content: "\e905"; }
+
+.icon-youtube:before {
+  content: "\e906"; }
+
+.icon-arrow-right:before {
+  content: "\e907"; }
+
+.icon-arrow-left:before {
+  content: "\e908"; }
+
+.icon-seo:before {
+  content: "\e909"; }
+
+.icon-code:before {
+  content: "\e90a"; }
+
+.icon-chevron-up:before {
+  content: "\e90b"; }
+
+.icon-chat:before {
+  content: "\e96c"; }
+
 body {
   position: relative;
   font-size: 16px;
@@ -61,26 +139,6 @@ section, header {
   section, header {
     margin-bottom: 50px;
     overflow: hidden; } }
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 300;
-  src: url(..//fonts/Roboto-Light.woff2); }
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 400;
-  src: url(..//fonts/Roboto-Regular.woff2); }
-
-@font-face {
-  font-family: 'Roboto';
-  font-weight: 500;
-  src: url(..//fonts/Roboto-Medium.woff2); }
-
-@font-face {
-  font-family: 'Montserat';
-  font-weight: 600;
-  src: url(..//fonts/Montserrat-ExtraBold.woff2); }
 
 .menu-wrapper {
   position: fixed;
@@ -362,7 +420,7 @@ button {
     width: 75px;
     line-height: 75px;
     text-align: center;
-    font-size: 22px;
+    font-size: 26px;
     color: #ffffff;
     background: #36AFD9;
     border-radius: 50%;
