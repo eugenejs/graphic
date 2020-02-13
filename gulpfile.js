@@ -72,7 +72,6 @@ const pngquant = require('imagemin-pngquant')
 
       var csslibs = [
           'app/libs/animate.css/animate.min.css',
-          'app/libs/hamburgers/dist/hamburgers.min.css',
           'app/libs/owl.carousel/dist/assets/owl.carousel.min.css'
       ]
 
@@ -111,28 +110,6 @@ const pngquant = require('imagemin-pngquant')
           .pipe(uglify())
           .pipe(gulp.dest('app/js'))
       })
-
-    // fontawesome
-
-      // fontawesome fonts
-
-        gulp.task('fafont', function() {
-            return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*.+(eot|ttf|woff|woff2)')
-                .pipe(gulp.dest('app/fonts/fontawesome/webfonts'))
-        });
-
-      // fontawesome css
-
-        gulp.task('facss', function() {
-            return gulp.src('node_modules/@fortawesome/fontawesome-free/css/all.min.css')
-                .pipe(gulp.dest('app/fonts/fontawesome/css'))
-        });
-
-      // pipe fontawesome
-
-        gulp.task('fontawesome', gulp.parallel('fafont','facss'));
-
-
 
     // build
 
@@ -174,6 +151,6 @@ const pngquant = require('imagemin-pngquant')
 
 
 
-gulp.task('libsinit', gulp.series('libs','cssmin','jsmin','fontawesome'))
+gulp.task('libsinit', gulp.series('libs','cssmin','jsmin'))
 gulp.task('watch', gulp.parallel('sass', 'pug', 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('build-css', 'build-fonts', 'build-js', 'build-html','img'));
