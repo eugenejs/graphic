@@ -13,7 +13,6 @@
 	align-items: center
 	background: #ffffff
 
-
 .logo
 	height: 50px
 
@@ -44,15 +43,17 @@
 		+shadow
 		justify-content: flex-start
 	.navigation
-		position: fixed
-		top: 0
-		left: -100%
-		height: 100vh
-		background: #ffffff
 		width: 300px
 		padding-top: 150px
+		background: #ffffff
 		+shadow
+		position: fixed
+		top: 0
+		bottom: 0
+		left: 0
 		z-index: -100
+		transform: translateX(-100%)
+		transition: transform .3s
 		li
 			display: block
 			width: 100%
@@ -73,6 +74,8 @@
 						display: none
 		a
 			transition: .2s
+	.navigation-visible
+		transform: translateX(0)
 
 @media (max-width: 568px)
 	.navigation

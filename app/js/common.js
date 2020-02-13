@@ -21,9 +21,7 @@ $( document ).ready(function() {
 	$('.hamburger').click(function (){
 
 		$('.hamburger').toggleClass('hamburger-active')
-
-		if($('.hamburger').hasClass('hamburger-active')) $('.navigation').css({'left' : '0%', 'transition' : '.3s ease-out'})
-		else $('.navigation').css({'left' : '-100%', 'transition' : '.3s ease-out'})
+		$('.navigation').toggleClass('navigation-visible')
 
 	});
 
