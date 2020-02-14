@@ -8,10 +8,10 @@
 			img.logo(src='img/logo.svg' alt='Graphic')
 		nav.navigation
 			ul
-				+link('#top','Главная')
-				+link('#services','Услуги')
-				+link('#about','О нас')
-				+link('#contacts','Контакты')
+				+nav_link('#top','Главная')
+				+nav_link('#services','Услуги')
+				+nav_link('#about','О нас')
+				+nav_link('#contacts','Контакты')
 				li
-					a(href='#subscribe')
+					a.navigation__link(href='#subscribe')
 						button.btn.btn_black.btn_nav Подписаться

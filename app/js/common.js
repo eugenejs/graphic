@@ -18,44 +18,6 @@ $( document ).ready(function() {
 		}
 	});
 
-	$('.hamburger').click(function (){
-
-		$('.hamburger').toggleClass('hamburger-active')
-		$('.navigation').toggleClass('navigation-visible')
-
-	});
-
-	$("a[href='#top']").click(function() {
-		$("html, body").animate({ scrollTop: 0 }, "slow");
-		if($('.hamburger').hasClass('hamburger-active')) $('.hamburger').click()
-		return false;
-	});
-
-	$("a[href='#services']").click(function() {
-		$("html, body").animate({ scrollTop: $(".services").offset().top - 200 }, "slow");
-		if($('.hamburger').hasClass('hamburger-active')) $('.hamburger').click()
-		return false;
-	});
-
-	$("a[href='#about']").click(function() {
-		$("html, body").animate({ scrollTop: $(".achivements").offset().top - 200 }, "slow");
-		if($('.hamburger').hasClass('hamburger-active')) $('.hamburger').click()
-		return false;
-	});
-
-	$("a[href='#contacts']").click(function() {
-		$("html, body").animate({ scrollTop: $(".contact").offset().top - 200 }, "slow");
-		if($('.hamburger').hasClass('hamburger-active')) $('.hamburger').click()
-		return false;
-	});
-
-	$("a[href='#subscribe']").click(function() {
-		$("html, body").animate({ scrollTop: $(".subscribe").offset().top - 200 }, "slow");
-		if($('.hamburger').hasClass('hamburger-active')) $('.hamburger').click()
-		return false
-	});
-
-
 	var wow = new WOW(
 		{
 		  boxClass:     'wow',
@@ -68,6 +30,39 @@ $( document ).ready(function() {
 		}
 	  );
 	  wow.init();
+
+
+	$('.hamburger').click(function (){
+
+		$('.hamburger').toggleClass('hamburger-active')
+		$('.navigation').toggleClass('navigation-visible')
+
+	});
+
+
+	$('.navigation__link').click(function() {
+		if($('.hamburger').hasClass('hamburger-active')) $('.hamburger').click()
+	});
+
+	$("a[href='#top']").click(function() {
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	});
+
+	$("a[href='#services']").click(function() {
+		$("html, body").animate({ scrollTop: $(".services").offset().top - 200 }, "slow");
+	});
+
+	$("a[href='#about']").click(function() {
+		$("html, body").animate({ scrollTop: $(".achivements").offset().top - 200 }, "slow");
+	});
+
+	$("a[href='#contacts']").click(function() {
+		$("html, body").animate({ scrollTop: $(".contact").offset().top - 200 }, "slow");
+	});
+
+	$("a[href='#subscribe']").click(function() {
+		$("html, body").animate({ scrollTop: $(".subscribe").offset().top - 200 }, "slow");
+	});
 
 
 });
@@ -110,10 +105,10 @@ $(window).scroll(function(){
 		a = 1;
 	}
 
-	if($(this).scrollTop() > 100) $('.menu-wrapper').css({'box-shadow' : '0 0 20px #D9D9D9', 'transition' : '.5s'})
-	else $('.menu-wrapper').css({'box-shadow' : '0 0 0 #D9D9D9', 'transition' : '.5s'})
+	if($(this).scrollTop() > 100) $('.menu-wrapper').addClass('shadow')
+	else $('.menu-wrapper').removeClass('shadow')
 
-	if($(this).scrollTop() > 500) $('.btn_up').css({'bottom' : '15px'})
-	else $('.btn_up').css({'bottom' : '-50px'})
+	if($(this).scrollTop() > 500) $('.btn_up').addClass('btn_up_visible')
+	else $('.btn_up').removeClass('btn_up_visible')
 
 });
